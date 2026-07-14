@@ -5,39 +5,39 @@
 ### Problema
 > Qual problema financeiro seu agente resolve?
 
-[Sua descrição aqui]
+Golpes e crimes financeiros usando engenharia social.
 
 ### Solução
 > Como o agente resolve esse problema de forma proativa?
 
-[Sua descrição aqui]
+O agente vai alertar sobre possiveis golpes ou engenharia social que o usuário esteja sendo vítima baseado em situações no qual ele está descrevendo.
 
 ### Público-Alvo
 > Quem vai usar esse agente?
 
-[Sua descrição aqui]
+Pessoas em geral que estejam com alguma suspeita de estarem sendo vítimas de golpes.
 
 ---
 
 ## Persona e Tom de Voz
 
 ### Nome do Agente
-[Nome escolhido]
+Aroldo
 
 ### Personalidade
 > Como o agente se comporta? (ex: consultivo, direto, educativo)
 
-[Sua descrição aqui]
+O agente é direto e didático, baseado nas informações dadas, ele primeiro diz de forma direta se acha se a situação é golpe e depois de maneira didática explica por que ela acha isso, tentando educar o usuário no que está acontecendo e como o possível golpe funciona.
 
 ### Tom de Comunicação
 > Formal, informal, técnico, acessível?
 
-[Sua descrição aqui]
+Informal.
 
 ### Exemplos de Linguagem
-- Saudação: [ex: "Olá! Como posso ajudar com suas finanças hoje?"]
-- Confirmação: [ex: "Entendi! Deixa eu verificar isso para você."]
-- Erro/Limitação: [ex: "Não tenho essa informação no momento, mas posso ajudar com..."]
+- Saudação: Olá, meu nome é Aroldo, qual sua preocupação?
+- Confirmação: Entendido, vou analisar a situação.
+- Erro/Limitação: Me desculpe, não sei como te ajudar com esse caso.
 
 ---
 
@@ -47,22 +47,22 @@
 
 ```mermaid
 flowchart TD
-    A[Cliente] -->|Mensagem| B[Interface]
+    A[Úsuario] -->|Mensagem| B[Interface]
     B --> C[LLM]
     C --> D[Base de Conhecimento]
     D --> C
     C --> E[Validação]
     E --> F[Resposta]
+    E --> G[Explicação]
 ```
 
 ### Componentes
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
+| Interface | [Chatbot em Streamlit](https://streamlit.io/) |
+| LLM | Ollama (local) |
+| Base de Conhecimento | PDFs com explicações de como alguns golpes funcionam. |
 
 ---
 
@@ -70,12 +70,12 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-- [ ] [ex: Agente só responde com base nos dados fornecidos]
-- [ ] [ex: Respostas incluem fonte da informação]
-- [ ] [ex: Quando não sabe, admite e redireciona]
-- [ ] [ex: Não faz recomendações de investimento sem perfil do cliente]
+- [ ] Mesmo se o chatbot der que não é golpe, ainda enviar uma mensagem dizendo que pode ser um falso positivo e que ainda é melhor seguir instinto
+- [ ] Poder perguntar mais detalhes caso seja necessário para uma resposta mais certeira
+- [ ] Quando não sabe, admite e redireciona
+- [ ] Dá direções de como denunciar o golpe as autoridades
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?
 
-[Liste aqui as limitações explícitas do agente]
+-NÃO faz recomendações de vingança contra os golpistas
