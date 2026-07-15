@@ -6,21 +6,15 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 | Arquivo | Formato | Utilização no Agente |
 |---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores |
-| `perfil_investidor.json` | JSON | Personalizar recomendações |
-| `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
-| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente |
-
-> [!TIP]
-> **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio.
-
----
-
-## Adaptações nos Dados
-
-> Você modificou ou expandiu os dados mockados? Descreva aqui.
-
-[Sua descrição aqui]
+| `A Study of Social Engineering in Online Frauds.pdf` | PDF| Entendimento de como funciona a engenharia social |
+| `Cryptocurrency_Scams_Analysis_and_Perspectives.pdf` | PDF | Entendimento sobre golpes envolvendo crypto moedas |
+| `cybercrime,scamsAndTheirVictims.pdf` | PDF | Entender sobre as vitimas de golpes de crimes cibernéticos|
+| `Phishing Attacks: A Recent Comprehensive Study and a New Anatomy.pdf` | PDF | Estudo especializado em ataques usando phising |
+| `romance scams.txt` | TXT | Uma compreensão de como golpes de romance funcionam|
+| `Scams-Schemes-Swindles-FINAL-On-Website.pdf` | PDF | Funcionamento de golpes|
+| `Social Engineering Attacks Prevention: A Systematic Literature Review.pdf` | PDF | Entendimento de prevenções de ataques de engenharia social|
+| `Social Engineering - the Art of Human Hacking.pdf` | PDF | Livro sobre engenharia social|
+| `social enginnering and scams related.txt` | PDF | Entendimento de diferentes tipos de golpes e ataques no qual engenharia social é usado|
 
 ---
 
@@ -29,12 +23,12 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 ### Como os dados são carregados?
 > Descreva como seu agente acessa a base de conhecimento.
 
-[ex: Os JSON/CSV são carregados no início da sessão e incluídos no contexto do prompt]
+[ Os PDF/TXT são carregados no início da sessão e incluídos no contexto do prompt]
 
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
 
-[Sua descrição aqui]
+Os dados são consultados dinamicamente
 
 ---
 
@@ -43,13 +37,6 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 > Mostre um exemplo de como os dados são formatados para o agente.
 
 ```
-Dados do Cliente:
-- Nome: João Silva
-- Perfil: Moderado
-- Saldo disponível: R$ 5.000
-
-Últimas transações:
-- 01/11: Supermercado - R$ 450
-- 03/11: Streaming - R$ 55
+Situação em que o usuário se encontra: O banco me ligou me pedindo diversos dados como senhas, cpf e respostas de senhas que coloquei lá.
 ...
 ```
